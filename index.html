@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portofolio Saya</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #1abc9c;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #2c3e50;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+
+    /* Home */
+    .home-container {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ccc;
+    }
+
+    .home-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    /* Sosmed */
+    .social-links {
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      margin-right: 15px;
+      display: inline-block;
+    }
+
+    .social-links img {
+      width: 30px;
+      height: 30px;
+      vertical-align: middle;
+      transition: transform 0.2s;
+    }
+
+    .social-links img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Skill */
+    .skills-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 15px;
+    }
+
+    .skills-list div {
+      background: #ecf0f1;
+      padding: 10px;
+      text-align: center;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    /* Gallery */
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card h2 {
+      font-size: 20px;
+      margin: 15px 15px 5px;
+    }
+
+    .card p {
+      font-size: 14px;
+      margin: 0 15px 15px;
+    }
+
+    /* Video */
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      text-align: center;
+      background-color: #2c3e50;
+      color: white;
+      padding: 30px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 600px) {
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 15px;
+        display: inline-block;
+        margin-top: 5px;
+      }
+
+      .home-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .home-text {
+        margin-top: 20px;
+      }
+    }
+
+    /* === Newspaper Style Theme === */
+
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: #fff;
+  color: #111;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #fff;
+  border-bottom: 3px double #000;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 40px;
+  letter-spacing: 2px;
+  margin: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+nav {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+nav a {
+  text-decoration: none;
+  color: #111;
+  margin: 0 15px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 16px;
+}
+
+/* Profile & Home Section */
+.home-container {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border: 3px solid #000;
+  border-radius: 2px;
+}
+
+.home-text {
+  flex: 1;
+}
+
+/* Skill list as columns */
+.skills-list {
+  column-count: 2;
+  column-gap: 40px;
+}
+
+.skills-list div {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Gallery Cards */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #000;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 2px 2px 0 #000;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #000;
+}
+
+.card h2 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.card p {
+  font-size: 14px;
+}
+
+/* Video */
+iframe {
+  width: 100%;
+  height: 400px;
+  border: 2px solid #000;
+}
+
+/* Footer */
+footer {
+  background-color: #f5f5f5;
+  color: #111;
+  text-align: center;
+  padding: 20px;
+  border-top: 2px double #000;
+  font-size: 14px;
+  font-family: 'Times New Roman', serif;
+}
+
+@media (max-width: 600px) {
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .skills-list {
+    column-count: 1;
+  }
+}
+.skills-list img {
+  width: 160px;
+  height: 160px;
+  
+}
+  
+.card img {
+  width: 50px;
+  height: 50px;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="nav-container">
+      <h1>Portofolio Saya</h1>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skill</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#video">Video</a>
+        <a href="#projects">Projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Home -->
+  <section id="home">
+    <h2>Home</h2>
+    <div class="home-container">
+      <img src="images/prof.jpg" alt="Foto Profil" class="profile-pic">
+      <div class="home-text">
+        <p>Halo! Aku azkew. selamat datang diportofolio ku, disini kalian dapat melihat tentang ku dan keahlian ku. delamat membaca! </p>
+        
+        <div class="social-links">
+          <a href="https://discord.gg/tS43R7UE" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/128/6422/6422197.png" alt="GitHub" title="Discord">
+          </a>
+          <a href="https://www.instagram.com/awhkewwmy?igsh=OHU4YmxoaDUzYWk3" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/128/6422/6422200.png" alt="Instagram" title="Instagram">
+          </a>
+          <a href="https://x.com/Azkewcruel?t=rGeZ7FfINYr_RR6zbgu96Q&s=09" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/128/12107/12107622.png" alt="X" title="X">
+          </a>
+          <a href="https://youtube.com/@azkewsassin?si=Qe85dK8Gyjpe-eUc" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/128/6422/6422215.png" alt="YouTube" title="YouTube">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About</h2>
+    <p>nama ku azka rizki aulia atau yang biasa dikenal azkew, aku berumur 16 tahun, aku anak satu-satunya dikeluargaku dan aku suka bermain game online seperti, mlbb ,codm dan roblox. aku adalah anak yang penuh ambisi, seperti aku tidk boleh kalah saat bermain dan itu cukup sulit unntuk mengontrol emosi ku. lalu amu mencoba sesuatu, yaitu mencoba membuat komunitas di discord. aku membuat server komunitas yang bernama Hangout For evryone, dengan bantuan beberapa teman ku. dan sekarang server itu sudah mulai sepi. ya, pada akhirnya semua orangada masanya, ada yang datang dan ada yang pergi. dan gunakan teman mu sebaik-baiknya, perlakukan dengan baik</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skill</h2>
+    <div class="skills-list">
+      <img src="https://cdn-icons-png.flaticon.com/128/18794/18794234.png" alt="Project 1">
+      <img src="https://cdn-icons-png.flaticon.com/128/8294/8294522.png" alt="Project 2">
+      <img src="https://cdn-icons-png.flaticon.com/128/991/991943.png" alt="Project 3">
+      <img src="https://cdn-icons-png.flaticon.com/128/2946/2946620.png" alt="Project 4">
+      <img src="https://cdn-icons-png.flaticon.com/128/2419/2419755.png" alt="Project 5">
+      <img src="https://cdn-icons-png.flaticon.com/128/12213/12213603.png" alt="Project 6">
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/128/686/686589.png" alt="Project 1">
+        <h2>Gaming</h2>
+        <p>Salah satu bakat ku bermain game, seperti game yang ku kuasai adalah mobbile legends, aku cukup ahli bermain game ini.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/128/10337/10337203.png" alt="Project 2">
+        <h2>Admin</h2>
+        <p>saya salah satu founder serta admin dibeberapa server discord, kalian dapat join ke komunitas saya</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/128/8761/8761994.png" alt="Project 3">
+        <h2>Otomotif</h2>
+        <p>saya saalah satu pencinta mobil dan mobil yang paling saya suka seperti 718 cayman, 911 gt3 rs dan carrera.</p>
+      </div>
+    </div>
+  </section>
+
+    <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="card-container">
+
+      <div class="card">
+        <img src="https://via.placeholder.com/400x200?text=Website+Ular" alt="Proyek 1">
+        <h2>Website Ular</h2>
+        <p>Game ular klasik berbasis HTML, CSS, dan JavaScript. Bisa dimainkan langsung di browser!</p>
+        <a href="https://auliaazkarizki-creator.github.io/Website-ular/" 
+           target="_blank" 
+           style="display:inline-block;margin:10px 0;padding:8px 14px;border:1px solid #000;text-decoration:none;color:#000;">
+           🌐 Lihat di GitHub Pages
+        </a>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/400x200?text=Aplikasi+ToDo" alt="Proyek 2">
+        <h2>Aplikasi To-Do</h2>
+        <p>Aplikasi sederhana untuk mencatat tugas dengan JavaScript interaktif.</p>
+        <a href="https://auliaazkarizki-creator.github.io/Website-kalkulator/" 
+           target="_blank" 
+           style="display:inline-block;margin:10px 0;padding:8px 14px;border:1px solid #000;text-decoration:none;color:#000;">
+           📂 Lihat di GitHub
+        </a>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/400x200?text=Server+Discord" alt="Proyek 3">
+        <h2>Server Discord Komunitas</h2>
+        <p>Server Discord bernama Hangout For Everyone, tempat ngobrol dan bermain bersama teman.</p>
+        <a href="https://discord.gg/bWxtNea4" 
+           target="_blank" 
+           style="display:inline-block;margin:10px 0;padding:8px 14px;border:1px solid #000;text-decoration:none;color:#000;">
+           💬 Buka Server Discord
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Video -->
+  <section id="video">
+    <h2>Video Pilihan</h2>
+    <div class="video-preview-container">
+      <a href="https://youtu.be/QCapMwnevz0?si=9tjTqUTiz87mIske" target="_blank" class="video-thumbnail-link">
+                <img src="https://img.youtube.com/vi/DJGJnxgJIq4/maxresdefault.jpg" alt="Thumbnail Video YouTube">
+        <div class="play-button">▶</div>
+      </a>
+      <p style="margin-top: 15px; font-size: 14px; font-style: italic;">Klik thumbnail di atas untuk menonton video ini di YouTube!</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Nama Azkew. Dibuat dengan HTML & CSS.</p>
+  </footer>
+
+</body>
+</html><!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Hello, World!</title>
+</head>
+<body>
+  <h1>
+    Hello, World!
+  </h1>
+</body>
+</html>
